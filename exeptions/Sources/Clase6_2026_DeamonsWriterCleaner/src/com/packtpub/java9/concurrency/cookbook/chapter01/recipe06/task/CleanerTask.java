@@ -12,7 +12,7 @@ public class CleanerTask extends Thread {
 	public CleanerTask(Deque<Event> deque) {
 		this.deque = deque;
 		// Establish that this is a Daemon Thread
-		setDaemon(true);
+		setDaemon(true); //le asigno el setDaemon en el constructor
 	}
 
 	@Override

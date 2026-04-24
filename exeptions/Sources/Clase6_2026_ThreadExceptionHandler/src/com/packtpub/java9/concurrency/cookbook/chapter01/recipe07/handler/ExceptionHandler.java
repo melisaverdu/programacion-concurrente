@@ -2,6 +2,13 @@ package com.packtpub.java9.concurrency.cookbook.chapter01.recipe07.handler;
 
 import java.lang.Thread.UncaughtExceptionHandler;
 
+/*
+	UncaughtEsceptionHandler es una interfaz que nos provee Java para que podamos implementarla 
+	y hacer nuestro propio manejador de excepciones.
+	Por lo cual al implemenar ña interfaz vamos a tener que sobreescribir obligatoriamente el 
+	método uncaughtException, que es el método que se va a ejecutar cada vez que un hilo lance 
+	una excepción no controlada (uncaught exception).
+*/
 public class ExceptionHandler implements UncaughtExceptionHandler {
 
 	/**

@@ -28,3 +28,7 @@ public class Main {
 
 	}
 }
+/*
+	Cuando terminaron de escribir todos los hilos, el programa termina, no espera a que termina el cleaner, 
+	porque el cleaner son hilos deamon.
+*/

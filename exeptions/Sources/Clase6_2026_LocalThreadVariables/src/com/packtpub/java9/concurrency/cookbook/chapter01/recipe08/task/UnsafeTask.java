@@ -6,6 +6,12 @@ import java.util.concurrent.TimeUnit;
 public class UnsafeTask implements Runnable {
 
 	private Date startDate;
+	/*
+		Los hilos empiezan a imprimir fechas distintas porque cada hilo tiene su propia variable startDate,
+		la cual se corrompe cada vez que un hilo la modifica.
+
+		Para esto creamos la clase SafeTask que es igual a esta (ver la clase)
+	*/
 
 	@Override
 	public void run() {

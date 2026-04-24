@@ -14,7 +14,7 @@ public class Videoconference implements Runnable {
 	public void arrive(String name){
 		System.out.printf("%s has arrived.\n",name);
 		// This method uses the countDown method to decrement the internal counter of the CountDownLatch
-		controller.countDown();
+		controller.countDown(); // llego uno, bajo un contador 
 		System.out.printf("VideoConference: Waiting for %d participants.\n",controller.getCount());
 	}
 
@@ -23,7 +23,10 @@ public class Videoconference implements Runnable {
 		System.out.printf("VideoConference: Initialization: %d participants.\n",controller.getCount());
 		try {
 			// Wait for all the participants
-			controller.await();
+			controller.await(); 
+			/*  el await va a hacer que el contador interno del CountDownLatch llegue a 0
+				el valor es 10, el numero con el que inicialice 
+			*/
 
 			// Starts the conference
 			System.out.printf("VideoConference: All the participants have come\n");

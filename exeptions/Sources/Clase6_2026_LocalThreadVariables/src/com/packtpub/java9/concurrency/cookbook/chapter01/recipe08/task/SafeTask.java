@@ -11,7 +11,12 @@ public class SafeTask implements Runnable {
 	//	}
 	//};
 
-	private static final ThreadLocal<Date> startDate = ThreadLocal.withInitial(Date::new);
+	private static final ThreadLocal<Date> startDate = ThreadLocal.withInitial(Date::new); 
+	/*
+		Es una variable local del hilo, el nombre que quieras "startDate", y le pones el tipo dato que queres 
+		que sea <Date>.
+		 
+	*/
 
 	@Override
 	public void run() {
