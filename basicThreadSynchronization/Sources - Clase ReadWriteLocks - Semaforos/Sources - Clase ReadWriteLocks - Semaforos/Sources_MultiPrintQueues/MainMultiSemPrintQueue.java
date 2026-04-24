@@ -6,7 +6,7 @@ public class MainMultiSemPrintQueue {
 
 		Thread thread[] = new Thread[12];
 		for (int i = 0; i < 12; i++) {
-			thread[i] = new Thread(new Job32(printQueue), "Thread " + i);
+			thread[i] = new Thread(new Job32(printQueue), "Thread " + i); //inicializo 12  hilos
 		}
 
 		for (int i = 0; i < 12; i++) {

@@ -10,8 +10,9 @@ public class PrintQueue31 {
 
 	public void printJob(Object document) {
 		String name = Thread.currentThread().getName();
+		//lo mismo que con un Lock, pero en vez de hacer lock y unlock, hago acquire y relase.
 		try {
-			semaphore.acquire();
+			semaphore.acquire(); //lo agarro
 
 			long duration = (long) (Math.random() * 10);
 			System.out.printf("%s: PrintQueue: Printing a Job during %d seconds\n", name, duration);
