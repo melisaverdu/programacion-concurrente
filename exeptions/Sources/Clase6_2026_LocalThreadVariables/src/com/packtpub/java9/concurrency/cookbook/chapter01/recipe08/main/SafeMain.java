@@ -8,7 +8,8 @@ public class SafeMain {
 
 	public static void main(String[] args) {
 		// Creates a task
-		SafeTask task = new SafeTask();
+		SafeTask task = new SafeTask(); // es igual a la Unsafetask() con la unica diferencia de que en vez
+										// de tener una startDate normar tiene una ThreadLocal<Date> 
 
 		// Creates and start three Thread objects for that Task
 		for (int i = 0; i < 2 * Runtime.getRuntime().availableProcessors(); i++) {

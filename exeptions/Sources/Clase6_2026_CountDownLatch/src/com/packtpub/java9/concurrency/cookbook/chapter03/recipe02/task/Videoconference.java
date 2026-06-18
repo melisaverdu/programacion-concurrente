@@ -8,7 +8,7 @@ public class Videoconference implements Runnable {
 	private final CountDownLatch controller;
 
 	public Videoconference(int number) {
-		controller=new CountDownLatch(number);
+		controller=new CountDownLatch(number); //el number es numero con el cual inicio el CountDownLatch, que es la cantidad de participantes que voy a esperar
 	}
 
 	public void arrive(String name){

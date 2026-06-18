@@ -30,7 +30,7 @@ public class CleanerTask extends Thread {
 			return;
 		}
 		delete = false;
-		do {
+		do { //va a limpiar todos los elementos que tengan mas de 10 segundos
 			Event e = deque.getLast();
 			difference = date.getTime() - e.getDate().getTime();
 			if (difference > 10000) {

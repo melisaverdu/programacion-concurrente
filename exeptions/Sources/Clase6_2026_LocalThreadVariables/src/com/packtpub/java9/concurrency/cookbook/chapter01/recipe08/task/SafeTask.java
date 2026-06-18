@@ -15,6 +15,9 @@ public class SafeTask implements Runnable {
 	/*
 		Es una variable local del hilo, el nombre que quieras "startDate", y le pones el tipo dato que queres 
 		que sea <Date>.
+
+		Cuando se inicialice la instancia como es local a un hilo, cada vez que se inicialice cada hilo
+		va a venir cada vez a ejecutar esto y va a crear una nueva instancia de Dtae.
 		 
 	*/
 
